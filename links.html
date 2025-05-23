@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
     <style>
+        /* Resumo
+            #   = id
+            .   = class
+            :   = pseudo-class
+            ::  = pseudo-element
+            >   = childrem
+        */
+
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
 
         a {
             color: red;
+            text-decoration: none;  /* Retira os links */
+            font-weight: bold; /* Colocar os links em negrito */
         }
         a:visited{
             color: darkred;
+        }
+
+        a:hover{
+            text-decoration: underline; /* Ao passar o mouse ficará sublinhado */
+            color: black; /* Ao passar o mouse por cima ficará preto */
+
+        }
+
+        a:active{ /* A cor do link ao clicar */
+            color: yellow; 
+        }
+
+        /* Pseudo-Elementos "::" ele acrencenta o texto antes ou depois do elemento. */
+        a::after{
+            content: ' [link]'; /* Texto que será acrecentado */
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
         }
     </style>
 </head>
